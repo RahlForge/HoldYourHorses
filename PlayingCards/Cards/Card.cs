@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PlayingCards
+namespace PlayingCards.Cards
 {
-    public class Class1
+    public abstract class Card
     {
+        public Card() { }
     }
 }

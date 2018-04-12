@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5FF90A1-0263-48C6-A113-7D747FFB0B76}</ProjectGuid>
+    <ProjectGuid>{F1831FF9-1955-4EA9-8C4B-67C86B6023D6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PlayingCards</RootNamespace>
-    <AssemblyName>PlayingCards</AssemblyName>
+    <RootNamespace>HoldYourHorsesControls</RootNamespace>
+    <AssemblyName>HoldYourHorsesControls</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,6 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,13 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cards\Card.cs" />
-    <Compile Include="Cards\StandardCard.cs" />
-    <Compile Include="Cards\Joker.cs" />
-    <Compile Include="Decks\Deck.cs" />
-    <Compile Include="Decks\PokerDeck.cs" />
+    <Compile Include="HorseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HorseControl.Designer.cs">
+      <DependentUpon>HorseControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="HorseControl.resx">
+      <DependentUpon>HorseControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5FF90A1-0263-48C6-A113-7D747FFB0B76}</ProjectGuid>
+    <ProjectGuid>{97E65464-1B78-4412-BCE3-87B81DA543DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PlayingCards</RootNamespace>
-    <AssemblyName>PlayingCards</AssemblyName>
+    <RootNamespace>HoldYourHorsesPlayers</RootNamespace>
+    <AssemblyName>HoldYourHorsesPlayers</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,13 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cards\Card.cs" />
-    <Compile Include="Cards\StandardCard.cs" />
-    <Compile Include="Cards\Joker.cs" />
-    <Compile Include="Decks\Deck.cs" />
-    <Compile Include="Decks\PokerDeck.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PlayingCards\PlayingCards.csproj">
+      <Project>{c5ff90a1-0263-48c6-a113-7d747ffb0b76}</Project>
+      <Name>PlayingCards</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
